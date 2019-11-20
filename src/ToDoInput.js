@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class ToDo extends React.Component{
+class ToDoInput extends React.Component{
     constructor(props){
         super(props)
         this.state={
@@ -29,4 +29,4 @@ class ToDo extends React.Component{
     }
 }
 
-export default ToDo
+export default ToDoInput
