@@ -16,12 +16,13 @@ class ToDo extends React.Component{
             method: 'POST',
             body: JSON.stringify({text:this.state.text, active:"true"})
         });
+        this.setState({text:""})
     }
 
     render(){
         return(
             <form onSubmit={this.addToDo}>
-                <input placeholder="put your shit here" value={this.state.value} onChange={e=>this.setState({text:e.target.value})}></input>
+                <input placeholder="put your shit here" value={this.state.text} onChange={e=>this.setState({text:e.target.value})}></input>
                 <button type="submit" >Add Task</button>
             </form>
         )
