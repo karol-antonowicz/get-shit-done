@@ -10,20 +10,21 @@
     color: black;
     text-transform: uppercase;
     background-color: rgb(130, 156, 156);
-width: 35%;
+width: 30%;
 text-align: start;
 }
 .active{
     color: black;
     background-color: rgb(92, 117, 117);
-    width: 35%;
+    width: 30%;
     text-align: start;
 
 }
 .id{
     color: wheat;
     background-color: rgb(66, 90, 90);
-    width: 30%;
-    text-align: start;
+    width: 20%;
+    text-align: center;
+    font-size: 10px;
 
 }
