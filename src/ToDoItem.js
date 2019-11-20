@@ -45,6 +45,7 @@ class ToDoItem extends React.Component {
         });
         this.setState({todoText:newText})
 
+
     }
 
       
@@ -53,12 +54,12 @@ class ToDoItem extends React.Component {
     render(){
         return(
         <div className="item">
-            <div className='text'><input onKeyPress={event=>{if(event.key==='Enter'){  this.updateTodo() ;}}} onChange={event => {
+            <div className='text'><input onKeyPress={event=>{if(event.key==='Enter')  {  this.updateTodo() ;}}}  onChange={event => {
         this.handleTextChange(event.target.value);
       }} className='inputText' type='text' value={this.state.todoText}></input></div>
             <div className="active">{this.state.active?'ACTIVE':'NOT ACTIVE'}</div>
             <div className="id">{this.props.todo.id}</div>
-            <button onClick={()=>this.toggleActive()}>activate</button>
+            <button onClick={()=>this.toggleActive()}>{this.state.active?'Deactivate':'Activate'}</button>
             <button onClick={()=>this.delete()}>delete</button>
         </div>
         )

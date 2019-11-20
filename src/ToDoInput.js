@@ -21,9 +21,10 @@ class ToDoInput extends React.Component{
 
     render(){
         return(
-            <form onSubmit={this.addToDo}>
-                <input placeholder="put your shit here" value={this.state.text} onChange={e=>this.setState({text:e.target.value})}></input>
-                <button type="submit" >Add Task</button>
+            <form class="addToDo" onSubmit={this.addToDo}>
+                <input autoFocus className="inputBox" value={this.state.text} onChange={e=>this.setState({text:e.target.value})}></input>
+                <label className="inputLabel">Put your shit here</label>
+                
             </form>
         )
     }

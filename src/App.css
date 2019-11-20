@@ -1,5 +1,10 @@
+* {
+  font-family: 'BioRhyme', serif;
+}
+
 .App {
   text-align: center;
+  background-color:   wheat;
 }
 
 .App-logo {
@@ -19,4 +24,100 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.Header{
+  width: 800px;
+  height: 50vh;
+  background-color: rgb(58, 37, 58);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.Shit {
+
+}
+
+.Shit h1{
+  color: wheat;
+  font-size: 64px;
+  font-family: 'Bungee Shade', cursive;
+  margin-bottom: 0;
+
+}
+
+.Shit h2{
+  color: wheat;
+  font-size: 32px;
+  font-family: 'BioRhyme', serif;
+
+}
+
+.Main {
+  padding-top: 1vh;
+  width: 800px;
+  background-color: rgb(58, 37, 58);
+  margin: 0 auto;
+  height: 100vh;
+
+}
+
+.author {
+  line-height: 0px;
+  font-size: 10px;
+  color: wheat;
+  text-transform: lowercase;
+}
+
+.author span {
+  text-transform: capitalize;
+  
+}
+
+.author a {
+  text-transform: capitalize;
+  color: wheat;
+  text-decoration: none;
+  transition: 0.2s;
+  
+}
+
+.author a:hover {
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  
+}
+
+.inputBox {
+  background-color: wheat;
+  color: rgb(58, 37, 58);
+  text-align: center;
+  border:none;
+  border-radius: 10px;
+  height: 48px;
+  width: 360px;
+  font-size: 18px;
+  box-shadow: 0px 0px 8px 0px wheat;
+
+}
+
+.inputBox:focus {
+  text-align: center;
+  outline: none;
+
+
+}
+
+.addToDo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputLabel {
+  color: wheat;
+  text-transform: lowercase;
+  font-size: 12px;
 }

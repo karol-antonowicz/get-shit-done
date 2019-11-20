@@ -25,6 +25,12 @@ text-align: start;
 font-size: 12px;
 }
 
+.inputText:focus{
+outline: none;
+color: wheat;
+}
+
+
 
 .active{
     color: black;
