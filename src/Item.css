@@ -3,14 +3,14 @@
     margin: 20px auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .text{
     color: black;
     text-transform: uppercase;
-    background-color: rgb(130, 156, 156);
 width: 50%;
+height: 32px;
 text-align: start;
 
 }
@@ -23,6 +23,13 @@ text-align: start;
     background-color: wheat;
 text-align: start;
 font-size: 12px;
+padding: none;
+border-radius: 10px;
+box-shadow: 0px 0px 2px 0px wheat;
+}
+
+input {
+    padding: 0;
 }
 
 .inputText:focus{
@@ -46,4 +53,21 @@ color: rgb(58, 37, 58);
     text-align: center;
     font-size: 10px;
 
+}
+
+.toggle {
+    height: 32px;
+    width: 32px;
+}
+
+
+.tickToggle {
+    height: 26px;
+    width: 26px;
+}
+
+.tickToggle:hover{
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
 }

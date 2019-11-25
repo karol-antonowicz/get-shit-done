@@ -110,6 +110,8 @@
 
 }
 
+
+
 .addToDo{
   display: flex;
   flex-direction: column;
@@ -122,6 +124,10 @@
   font-size: 12px;
 }
 
+.inputText {
+  text-align: center;
+}
+
 
 .delete {
   display: flex;
@@ -129,6 +135,11 @@
   align-items: center;
   height: 32px;
   width: 32px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
 }
 
 .cross {
