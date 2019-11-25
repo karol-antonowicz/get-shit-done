@@ -1,5 +1,6 @@
 import React from 'react'
 import './Item.css'
+import Delete from './images/delete.png'
 
 class ToDoItem extends React.Component {
     constructor(props) {
@@ -59,7 +60,7 @@ class ToDoItem extends React.Component {
       }} className='inputText' type='text' value={this.state.todoText}></input></div>
             <div className="active">{this.state.active?'ACTIVE':'NOT ACTIVE'}</div>
             <button onClick={()=>this.toggleActive()}>{this.state.active?'Deactivate':'Activate'}</button>
-            <a onClick={()=>this.delete()}><img src={delete}></img></a>
+            <a className="delete" onClick={()=>this.delete()}><img className="cross" src={Delete}></img></a>
         </div>
         )
     }

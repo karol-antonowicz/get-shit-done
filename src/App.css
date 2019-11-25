@@ -121,3 +121,24 @@
   text-transform: lowercase;
   font-size: 12px;
 }
+
+
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+}
+
+.cross {
+
+  height: 26px;
+  width: 26px;
+}
+
+.cross:hover {
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
