@@ -19,10 +19,17 @@ class ToDoInput extends React.Component{
         this.setState({text:""})
     }
 
+    maxLength = text => {
+        if (text.length >= 36) {
+            return
+        }
+    }
+
     render(){
         return(
             <form class="addToDo" onSubmit={this.addToDo}>
-                <input autoFocus className="inputBox" value={this.state.text} onChange={e=>this.setState({text:e.target.value})}></input>
+                <input autoFocus className="inputBox" value={this.state.text} onMaxLength={this.maxLength(this.state.text)} onChange={e=>{
+                    if (e.target.value.length >=36) {return } else {this.setState({text:e.target.value})}}}></input>
                 <label className="inputLabel">Put your shit here</label>
                 
             </form>
