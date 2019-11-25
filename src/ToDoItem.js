@@ -56,9 +56,9 @@ class ToDoItem extends React.Component {
         return (
             <div className="item">
                 <div className="toggle"><input onClick={() => this.toggleActive()} type="checkbox" className="tickToggle"></input></div>
-                <div className='text'><input onKeyPress={event => { if (event.key === 'Enter') { this.updateTodo(); } }} onChange={event => {
+                <div className="text"><input onKeyPress={event => { if (event.key === 'Enter') { this.updateTodo(); } }} onChange={event => {
                     this.handleTextChange(event.target.value);
-                }} className='inputText' type='text' value={this.state.todoText}></input></div>
+                }} className={this.state.active?'inputText':'inputTextDone'} type='text' value={this.state.todoText}></input></div>
                 <a className="delete" onClick={() => this.delete()}><img className="cross" src={Delete}></img></a>
             </div>
         )
