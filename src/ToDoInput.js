@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-class ToDoInput extends React.Component{
-    constructor(props){
+class ToDoInput extends React.Component {
+    constructor(props) {
         super(props)
-        this.state={
-            text:""
+        this.state = {
+            text: ""
         }
     }
 
@@ -14,9 +14,9 @@ class ToDoInput extends React.Component{
 
         fetch('https://to-do-app-5f68e.firebaseio.com/todo.json', {
             method: 'POST',
-            body: JSON.stringify({text:this.state.text, active:"true"})
+            body: JSON.stringify({ text: this.state.text, active: "true" })
         });
-        this.setState({text:""})
+        this.setState({ text: "" })
     }
 
     maxLength = text => {
@@ -25,13 +25,20 @@ class ToDoInput extends React.Component{
         }
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <form class="addToDo" onSubmit={this.addToDo}>
-                <input autoFocus className="inputBox" value={this.state.text} onMaxLength={this.maxLength(this.state.text)} onChange={e=>{
-                    if (e.target.value.length >=36) {return } else {this.setState({text:e.target.value})}}}></input>
+                <input autoFocus className="inputBox" value={this.state.text}
+                    onChange={e => {
+                        if (e.target.value.length >= 36) {
+                            return
+                        } else {
+                            this.setState({ text: e.target.value })
+                        }
+                    }}>
+                </input>
                 <label className="inputLabel">Put your shit here</label>
-                
+
             </form>
         )
     }

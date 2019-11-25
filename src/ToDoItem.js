@@ -58,9 +58,8 @@ class ToDoItem extends React.Component {
         this.handleTextChange(event.target.value);
       }} className='inputText' type='text' value={this.state.todoText}></input></div>
             <div className="active">{this.state.active?'ACTIVE':'NOT ACTIVE'}</div>
-            <div className="id">{this.props.todo.id}</div>
             <button onClick={()=>this.toggleActive()}>{this.state.active?'Deactivate':'Activate'}</button>
-            <button onClick={()=>this.delete()}>delete</button>
+            <a onClick={()=>this.delete()}><img src={delete}></img></a>
         </div>
         )
     }
