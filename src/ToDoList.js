@@ -8,9 +8,6 @@ class ToDoList extends React.Component {
         }
     }
     componentDidMount() {
-        this.loadData();
-        console.log(this.state.todos)
-
         setInterval(() => this.loadData(), 1000);
     }
     loadData() {
@@ -26,7 +23,7 @@ class ToDoList extends React.Component {
     }
     render() {
         return (<div>
-            {this.state.todos.map((todo, index)=> <ToDoItem key={index} todo={todo}/> )}
+            {this.state.todos.map((todo)=> <ToDoItem key={todo.id} todo={todo}/> )}
         </div>)
     }
 }

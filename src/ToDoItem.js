@@ -7,19 +7,20 @@ class ToDoItem extends React.Component {
         this.state = {
             active: props.todo.active,
             todo: props.todo,
-            todoText: props.todo.text
+            todoText: props.todo.text,
+            id: props.todo.id
         }
     }
     toggleActive() {
         const newActive = !this.state.active
-        fetch(`https://to-do-app-5f68e.firebaseio.com/todo/${this.props.todo.id}.json`, {
+        fetch(`https://to-do-app-5f68e.firebaseio.com/todo/${this.state.id}.json`, {
             method: 'PATCH',
             body: JSON.stringify({ active: newActive })
         });
         this.setState({ active: newActive })
     }
     delete() {
-        fetch(`https://to-do-app-5f68e.firebaseio.com/todo/${this.props.todo.id}.json`, {
+        fetch(`https://to-do-app-5f68e.firebaseio.com/todo/${this.state.id}.json`, {
             method: 'DELETE',
         });
     }
@@ -31,7 +32,7 @@ class ToDoItem extends React.Component {
     };
     updateTodo() {
         const newText = this.state.todoText
-        fetch(`https://to-do-app-5f68e.firebaseio.com/todo/${this.props.todo.id}.json`, {
+        fetch(`https://to-do-app-5f68e.firebaseio.com/todo/${this.state.id}.json`, {
             method: 'PATCH',
             body: JSON.stringify({ text: newText })
         });
