@@ -26,6 +26,13 @@
   color: #09d3ac;
 }
 
+.Wrap {
+  min-height: 100vh;
+  width: 800px;
+  background-color: rgb(58, 37, 58);
+  margin: 0 auto;
+}
+
 .Header{
   width: 800px;
   background-color: rgb(58, 37, 58);

@@ -9,8 +9,9 @@ class ToDoList extends React.Component {
     }
     componentDidMount() {
         this.loadData();
+        console.log(this.state.todos)
 
-        setInterval(() => this.loadData(), 3000);
+        setInterval(() => this.loadData(), 1000);
     }
     loadData() {
         fetch('https://to-do-app-5f68e.firebaseio.com/todo.json')
@@ -21,7 +22,7 @@ class ToDoList extends React.Component {
                 todo.id=key;
                 return todo;
             }))
-            .then(todos=>this.setState({todos:todos}))
+            .then(todos=>this.setState({todos:todos}, ()=>console.log(this.state.todos)))
     }
     render() {
         return (<div>
