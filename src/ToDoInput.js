@@ -1,6 +1,4 @@
 import React from 'react'
-
-
 class ToDoInput extends React.Component {
     constructor(props) {
         super(props)
@@ -8,23 +6,19 @@ class ToDoInput extends React.Component {
             text: ""
         }
     }
-
     addToDo = event => {
         event.preventDefault();
-
         fetch('https://to-do-app-5f68e.firebaseio.com/todo.json', {
             method: 'POST',
             body: JSON.stringify({ text: this.state.text, active: "true" })
         });
         this.setState({ text: "" })
     }
-
     maxLength = text => {
         if (text.length >= 36) {
             return
         }
     }
-
     render() {
         return (
             <form className="addToDo" onSubmit={this.addToDo}>
@@ -38,10 +32,8 @@ class ToDoInput extends React.Component {
                     }}>
                 </input>
                 <label className="inputLabel">Put your shit here</label>
-
             </form>
         )
     }
 }
-
 export default ToDoInput

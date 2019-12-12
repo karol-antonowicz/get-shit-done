@@ -1,7 +1,6 @@
 import React from 'react'
 import './Item.css'
 import Delete from './images/delete.png'
-
 class ToDoItem extends React.Component {
     constructor(props) {
         super(props)
@@ -9,11 +8,8 @@ class ToDoItem extends React.Component {
             active: props.todo.active,
             todo: props.todo,
             todoText: props.todo.text
-
-
         }
     }
-
     toggleActive() {
         const newActive = !this.state.active
         fetch(`https://to-do-app-5f68e.firebaseio.com/todo/${this.props.todo.id}.json`, {
@@ -21,23 +17,18 @@ class ToDoItem extends React.Component {
             body: JSON.stringify({ active: newActive })
         });
         this.setState({ active: newActive })
-
     }
-
     delete() {
         fetch(`https://to-do-app-5f68e.firebaseio.com/todo/${this.props.todo.id}.json`, {
             method: 'DELETE',
         });
-
     }
-
     handleTextChange = newValue => {
         console.log(this.state.todoText)
         this.setState({
             todoText: newValue
         });
     };
-
     updateTodo() {
         const newText = this.state.todoText
         fetch(`https://to-do-app-5f68e.firebaseio.com/todo/${this.props.todo.id}.json`, {
@@ -45,13 +36,7 @@ class ToDoItem extends React.Component {
             body: JSON.stringify({ text: newText })
         });
         this.setState({ todoText: newText })
-
-
     }
-
-
-    // {this.state.active?'ACTIVE':'NOT ACTIVE'}
-
     render() {
         return (
             <div className="item">
@@ -64,6 +49,4 @@ class ToDoItem extends React.Component {
         )
     }
 }
-
-
 export default ToDoItem
