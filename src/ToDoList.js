@@ -33,7 +33,7 @@ class ToDoList extends React.Component {
 
     render() {
         return (<div>
-            {this.state.todos.map(todo=> <ToDoItem todo={todo}/> )}
+            {this.state.todos.map((todo, index)=> <ToDoItem key={index} todo={todo}/> )}
         </div>)
     }
 }
