@@ -27,7 +27,7 @@ class ToDoInput extends React.Component {
 
     render() {
         return (
-            <form class="addToDo" onSubmit={this.addToDo}>
+            <form className="addToDo" onSubmit={this.addToDo}>
                 <input autoFocus className="inputBox" value={this.state.text}
                     onChange={e => {
                         if (e.target.value.length >= 36) {
