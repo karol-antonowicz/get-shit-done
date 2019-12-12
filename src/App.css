@@ -28,7 +28,6 @@
 
 .Header{
   width: 800px;
-  height: 50vh;
   background-color: rgb(58, 37, 58);
   margin: 0 auto;
   display: flex;
@@ -59,8 +58,6 @@
   width: 800px;
   background-color: rgb(58, 37, 58);
   margin: 0 auto;
-  height: 100vh;
-
 }
 
 .author {

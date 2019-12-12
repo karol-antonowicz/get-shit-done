@@ -6,6 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <div className="Wrap">
       <div className="Header">
         <div className='author'><p>Made by <span><a href='https://www.linkedin.com/in/karol-antonowicz/'>Karol Antonowicz</a></span></p></div>
         <div>
@@ -19,6 +20,7 @@ function App() {
       <div className="Main">
 
         <ToDoList />
+      </div>
       </div>
     </div>
   );
