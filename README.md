@@ -1,4 +1,4 @@
-### LIVE DEMO: https://github.com/karol-antonowicz/get-shit-done.git
+### LIVE DEMO: https://gracious-jepsen-867089.netlify.com/
 
 
 ## GET SHIT DONE
