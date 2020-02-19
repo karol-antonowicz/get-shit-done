@@ -46,7 +46,7 @@ class ToDoItem extends React.Component {
                 <div className="text"><input onKeyPress={event => { if (event.key === 'Enter') { this.updateTodo(); } }} onChange={event => {
                     this.handleTextChange(event.target.value);
                 }} className={this.state.active?'inputText':'inputTextDone'} type='text' value={this.state.todoText}></input></div>
-                <a className="delete" onClick={() => this.delete()}><img className="cross" src={Delete}></img></a>
+                <div className="delete" onClick={() => this.delete()}><img alt='delete' className="cross" src={Delete}></img></div>
             </div>
         )
     }
