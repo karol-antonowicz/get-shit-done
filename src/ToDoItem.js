@@ -1,6 +1,7 @@
 import React from 'react'
 import './Item.css'
 import Delete from './images/delete.png'
+
 class ToDoItem extends React.Component {
     constructor(props) {
         super(props)
@@ -41,7 +42,7 @@ class ToDoItem extends React.Component {
     render() {
         return (
             <div className="item">
-                <div className="toggle"><input onClick={() => this.toggleActive()} type="checkbox" className="tickToggle"></input></div>
+                <div className="toggle"><input onClick={() => this.toggleActive()} defaultChecked={!this.state.active} type="checkbox" className="tickToggle"></input></div>
                 <div className="text"><input onKeyPress={event => { if (event.key === 'Enter') { this.updateTodo(); } }} onChange={event => {
                     this.handleTextChange(event.target.value);
                 }} className={this.state.active?'inputText':'inputTextDone'} type='text' value={this.state.todoText}></input></div>
