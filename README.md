@@ -1,4 +1,5 @@
-# LIVE DEMO: (https://github.com/karol-antonowicz/get-shit-done.git) [https://github.com/karol-antonowicz/get-shit-done.git]
+### LIVE DEMO: https://github.com/karol-antonowicz/get-shit-done.git
+
 
 ## GET SHIT DONE
 ### To-Do App made with React, Firebase
